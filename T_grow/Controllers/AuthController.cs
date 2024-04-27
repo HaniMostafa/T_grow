@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using T_grow.Models;
 using T_grow.Services;
 
@@ -27,7 +28,7 @@ namespace T_grow.Controllers
 
             return Ok(result);
         }
-        [HttpPost("token")]
+        [HttpPost("login")]
         public async Task<IActionResult> GetTokenAsync([FromBody] TokingRequstModel model)
         {
             if (!ModelState.IsValid)
